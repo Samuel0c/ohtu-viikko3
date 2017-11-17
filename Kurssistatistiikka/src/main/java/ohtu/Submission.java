@@ -38,7 +38,7 @@ public class Submission {
                 + this.hours + " tuntia, tehdyt tehtävät:" + this.printableExercises();
     }
     
-    private String printableExercises() {
+    public String printableExercises() {
         String ex = "";
         for (int current : this.exercises) {
             ex += " " + current;
