@@ -45,8 +45,7 @@ public class KassapaateTest {
     public void kortilleLadataanRahaaJosSummaOnPositiivinen() {
         when(kortti.getSaldo()).thenReturn(5);
         kassa.lataa(kortti, 5);
-        
-        verify(kortti, times(1)).lataa(5);
+                verify(kortti, times(1)).lataa(5);
     }
     
     @Test
