@@ -1,24 +1,18 @@
 package statistics.matcher;
 
-import java.lang.reflect.Method;
 import statistics.Player;
 
 public class Not implements Matcher {
 
-    private Matcher[] matchers;
+    private Matcher matcher;
 
-    public Not(Matcher... matchers) {
-        this.matchers = matchers;
+    public Not(Matcher matcher) {
+        this.matcher = matcher;
     }
 
     @Override
     public boolean matches(Player p) {
-        for (Matcher matcher : matchers) {
-            if (matcher.matches(p)) {
-                return false;
-            }
-        }
-        return true;
+        return !matcher.matches(p);
     }
 
 }
